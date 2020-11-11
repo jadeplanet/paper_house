@@ -1,0 +1,220 @@
+/* COMMON */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5em;
+  margin: 0;
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  width: 100vw;
+  height: 10vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header {
+  width: 210px;
+  height: 70px;
+  background: url('./image/logo.jpg');
+}
+
+/* GALLERY */
+
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: 80vh;
+}
+
+.gallery li {
+  border-right: 5px solid #000;
+  flex: 1;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery li:last-child {
+  border-right: none;
+}
+
+.gallery li {
+  filter: grayscale(1);
+  flex: 1;
+}
+
+.gallery li:nth-child(1) {
+  background: url('./image/professor.jpg') no-repeat center center;
+}
+.gallery li:nth-child(2) {
+  background: url('./image/tokyo.jpg') no-repeat center;
+}
+.gallery li:nth-child(3) {
+  background: url('./image/berlin.jpg') no-repeat center;
+}
+.gallery li:nth-child(4) {
+  background: url('./image/rio.jpg') no-repeat center;
+}
+.gallery li:nth-child(5) {
+  background: url('./image/nairobi.jpg') no-repeat center;
+}
+
+.gallery li:nth-child(1):hover,
+.gallery li:nth-child(2):hover,
+.gallery li:nth-child(3):hover,
+.gallery li:nth-child(4):hover,
+.gallery li:nth-child(5):hover {
+  flex: 2;
+  filter: grayscale(0);
+}
+
+.content {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+  bottom: -250px;
+  transition: 0.5s;
+  padding: 20px;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+.content p {
+  color: rgb(171, 171, 171);
+}
+
+.gallery li:hover .content {
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+
+.block {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.inner-link {
+  width: 160px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+button.inner-link a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+/* SYNOPSIS */
+.synopsis {
+  height: 100vh;
+  background: #000;
+}
+
+.spacer {
+  height: 10vh;
+  background: #000;
+}
+
+#story-board {
+  color: #fff;
+  text-align: center;
+
+  width: 1280px;
+  height: 80vh;
+
+  margin: 0 auto;
+}
+
+.title {
+  width: inherit;
+  height: 10vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.container {
+  width: inherit;
+  margin: 0 auto;
+}
+
+.btn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.btn li {
+  float: left;
+  background-color: rgb(55, 55, 55);
+  border-right: 1px solid rgb(152, 152, 152);
+  padding: 5px;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+}
+
+.btn li.active {
+  background-color: rgb(29, 29, 29);
+  border-bottom: 2px solid crimson;
+}
+
+.tabs div {
+  background-color: rgb(29, 29, 29);
+  height: 450px;
+  box-sizing: border-box;
+  display: none;
+  padding: 50px;
+}
+.tabs div.active {
+  display: block;
+}
+
+.tabs div iframe {
+  float: left;
+  width: 50%;
+  height: 100%;
+  margin-right: 50px;
+}
+
+.tabs div p {
+  text-align: left;
+  margin: 0;
+  color: rgb(220, 220, 220);
+  line-height: 1.8;
+}
+
+#story-board button {
+  background-color: crimson;
+  width: 160px;
+  height: 40px;
+  border: none;
+  margin: 30px auto;
+}
+
+#story-board button a {
+  color: #fff;
+}
